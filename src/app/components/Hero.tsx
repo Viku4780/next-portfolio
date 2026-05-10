@@ -16,7 +16,7 @@ const Hero = () => {
             transition={{delay: 0.2}}
             initial='hidden'
             className='flex flex-col items-center mb-4'>
-                <Image src={'/profile.avif'} alt='profile image' width={100} height={100} className='rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary' />
+                <Image src={'/profile.jpg'} alt='profile image' width={100} height={100} className='rounded-full mb-4 w-32 h-32 object-cover ring-2 ring-primary' />
             </motion.div>
 
             <motion.h1 
