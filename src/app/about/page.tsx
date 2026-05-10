@@ -34,7 +34,7 @@ const page = () => {
             <ul className='text-secondary space-y-2'>
               <li>Node.js</li>
               <li>Express</li>
-              <li>PostgreSQL</li>
+              {/* <li>PostgreSQL</li> */}
               <li>MongoDB</li>
             </ul>
           </div>
@@ -55,7 +55,7 @@ const page = () => {
 
 
       {/* experience section */}
-      <section className='mb-16'>
+      {/* <section className='mb-16'>
         <h2 className='section-title'>Experiences</h2>
 
         <div className='max-w-3xl mx-auto space-y-8'>
@@ -81,7 +81,7 @@ const page = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* education section */}
@@ -89,12 +89,13 @@ const page = () => {
         <h2 className='section-title'>Education</h2>
 
         <div className='max-w-3xl mx-auto space-y-8'>
-          <div className='bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md'>
+          {/* <div className='bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md'>
             <h3 className='text-xl font-semibold mb-2'>BTech in Computer Science</h3>
             <p>IIT Delhi ● 2021 - 2025</p>
 
            <p className='text-secondary'>Graduated with honors. Focused on software engineering and web development.</p>
-          </div>
+          </div> */}
+          Self tought Full Stack Developer
 
         </div>
       </section>
