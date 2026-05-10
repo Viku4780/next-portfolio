@@ -89,13 +89,13 @@ const page = () => {
         <h2 className='section-title'>Education</h2>
 
         <div className='max-w-3xl mx-auto space-y-8'>
-          {/* <div className='bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md'>
-            <h3 className='text-xl font-semibold mb-2'>BTech in Computer Science</h3>
-            <p>IIT Delhi ● 2021 - 2025</p>
+          <div className='bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md'>
+            {/* <h3 className='text-xl font-semibold mb-2'>BTech in Computer Science</h3>
+            <p>IIT Delhi ● 2021 - 2025</p> */}
 
-           <p className='text-secondary'>Graduated with honors. Focused on software engineering and web development.</p>
-          </div> */}
-          Self tought Full Stack Developer
+           <p className='text-secondary'>Self tought Full Stack Developer.</p>
+          </div>
+          
 
         </div>
       </section>
