@@ -24,7 +24,7 @@ export const projects: Project[] = [
         technologies: ['Next.js', 'Tailwind CSS', 'TypeScript','Framer Motion'],
         githubLink: 'https://github.com/Viku4780/next-portfolio',
         demoLink: 'https://next-portfolio-lac-gamma-96.vercel.app/',
-        image: '/projects/portfolio.png',
+        image: '/projects/portfolio-app.png',
       },
       {
         title: 'Blog Platform',
