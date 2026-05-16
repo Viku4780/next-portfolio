@@ -1,3 +1,7 @@
+'use client';
+
+import {MotionProps} from 'framer-motion';
+
 export const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -24,15 +28,15 @@ export const staggerContainer = {
   }
 }
 
-export const cardHover = {
+export const cardHover: MotionProps = {
   whileHover: { scale: 1.05 },
   transition: { type: "spring", stiffness: 300 }
-} as const;
+};
 
-export const cardHoverSmall = {
+export const cardHoverSmall: MotionProps = {
   whileHover: { scale: 1.02 },
   transition: { type: "spring", stiffness: 300 }
-} as const;
+} ;
 
 export const pageTransition = {
   initial: { opacity: 0 },
