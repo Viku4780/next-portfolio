@@ -27,12 +27,12 @@ export const staggerContainer = {
 export const cardHover = {
   whileHover: { scale: 1.05 },
   transition: { type: "spring", stiffness: 300 }
-}
+} as const;
 
 export const cardHoverSmall = {
   whileHover: { scale: 1.02 },
   transition: { type: "spring", stiffness: 300 }
-}
+} as const;
 
 export const pageTransition = {
   initial: { opacity: 0 },
