@@ -30,7 +30,7 @@ const Navbar = () => {
             <div className='container max-w-7xl mx-auto px-4'>
 
                 <div className='flex items-center justify-between h-16'>
-                    <Link href={'/'} className='text-xl font-bold text-primary'>Devfolio&trade;</Link>
+                    <Link href={'/'} className='text-xl font-bold text-primary'>VikrantCodes&trade;</Link>
 
                     {/* desktop menus */}
                     <div className='hidden md:flex items-center space-x-8'>

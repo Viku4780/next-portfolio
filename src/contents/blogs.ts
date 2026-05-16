@@ -3,7 +3,7 @@ import { Blog } from "@/types";
 export const blogs: Blog[] = [
     {
         title: 'Getting Started with Next.js 16',
-        excerpt: 'Learn about the new features and improvements in Next.js 14.',
+        excerpt: 'Learn about the new features and improvements in Next.js 16.',
         date: '2026-02-15',
         readTime: '5 min read',
         slug: 'getting-started-with-nextjs-16',

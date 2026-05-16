@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import { FaCode, FaGraduationCap, FaLaptop } from 'react-icons/fa'
+import { FaCode, FaGraduationCap, FaLaptopCode } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { 
   fadeInUp, 
