@@ -24,7 +24,7 @@ const page = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     }
 
-    const handleSubmit = async(e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         const response = await axios.post('/api/auth/admin/login', JSON.stringify(formData));
