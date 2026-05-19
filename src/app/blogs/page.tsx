@@ -1,7 +1,6 @@
 'use client'
 
 import { blogs } from '@/contents/blogs'
-import Link from 'next/link'
 import { FaCalendarAlt, FaClock } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animation'
@@ -24,9 +23,9 @@ const page = () => {
         initial="initial"
         animate="animate"
       >
-        {blogs.map((blog, index) => (
+        {blogs.map((blog) => (
           <motion.article
-            key={index}
+            key={blog.slug}
             className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
             variants={fadeInUp}
             {...cardHoverSmall}
@@ -37,9 +36,12 @@ const page = () => {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Link href={`/blogs/${blog.slug}`} className="hover:text-primary transition-colors">
+                <a href={blog.link} className="hover:text-primary transition-colors"
+                target="_blank" 
+                 rel="noopener noreferrer" 
+                >
                   {blog.title}
-                </Link>
+                </a>
               </motion.h2>
               
               <motion.p 
