@@ -33,7 +33,7 @@ const page = () => {
     }
 
     return (
-        <div className=' flex justify-center overflow-hidden items-center p-[2px] relative sm:w-[400px] mx-auto z-1 rounded'>
+        <div className='  overflow-hidden items-center p-[2px] relative sm:w-[400px] mx-auto z-1 rounded'>
 
             <div className='absolute inset-0 bg-gradient-to-r from-white via-black/20 to-black/50 dark:bg-gradient-to-r dark:from-white/0 dark:via-white/20 dark:to-white/50 z-2 sm:scale-150 scale-200 animate-[spin_3s_linear_infinite]'/>
 

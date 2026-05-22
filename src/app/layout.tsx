@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white transition-colors dark:bg-gray-900 dark:text-white`}
       >
         <ThemeProvider>
-          <div>{children}</div>
+          <div className="w-full h-auto">{children}</div>
         </ThemeProvider>
       </body>
     </html>
