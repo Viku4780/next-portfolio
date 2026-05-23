@@ -22,7 +22,7 @@ export default function RootLayout({
                 <AdminSidebar />
                 <MobileSidebar />
 
-                <main className='flex-1 h-screen'>
+                <main className='flex-1 h-screen overflow-y-auto'>
                     {children}
                 </main>
             </div>
