@@ -4,13 +4,17 @@ import { motion } from 'framer-motion'
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { useTheme } from '@/app/(users)/context/ThemeContext';
 
-const DashboardHeader = () => {
+const DashboardHeader = ({setSidebarCollapse, sidebarCollapse}) => {
     const { theme, toggleTheme } = useTheme();
+
+    const toggelSidebar = () => {
+        setSidebarCollapse(!sidebarCollapse)
+    }
 
     return (
         <div className='flex items-center justify-between p-4 border-b border-gray-800'>
             <div className='flex items-center gap-4'>
-                <div className='p-1 border border-gray-500 rounded'>
+                <div onClick={toggelSidebar} className='p-1 border border-gray-500 rounded'>
                     <svg
                         xmlns="http://w3.org"
                         fill="none"
@@ -27,33 +31,33 @@ const DashboardHeader = () => {
                     </svg>
                 </div>
 
-                <div>
+                <div className='overflow-hidden'>
                     <h2 className='text-lg '>Dashboard</h2>
-                    <p className='text-xs text-secondary'>Welcome back, Vikrant Here's what's happening with your portfolio</p>
+                    <p className='text-xs text-secondary hidden md:flex'>Welcome back, Vikrant Here's what's happening with your portfolio</p>
                 </div>
 
             </div>
 
-            <div className='flex items-center mr-5 gap-5'>
+            <div className='flex items-center mr-5 md:gap-5'>
 
-                <div className='flex items-center border border-secondary py-2 px-4 rounded gap-2 text-sm w-[300px]'>
+                <div className='flex items-center md:border border-secondary p-2 rounded gap-2 text-sm md:w-[300px]'>
 
                     <svg
                         xmlns="http://w3.org"
                         fill="none"
                         viewBox="0 0 24 24"
-                        stroke-width="2"
+                        strokeWidth="2"
                         stroke="currentColor"
                         className="w-6 h-6"
                     >
                         <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.604 10.604z"
                         />
                     </svg>
 
-                    <input type="text" placeholder='Search anything...                  Ctrl + K' className='outline-none flex-1 text-secondary' />
+                    <input type="text" placeholder='Search anything...                  Ctrl + K' className='outline-none hidden md:flex flex-1 text-secondary' />
 
                 </div>
 
