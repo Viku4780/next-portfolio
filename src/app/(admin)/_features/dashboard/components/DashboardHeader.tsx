@@ -2,19 +2,17 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext';
 import { useTheme } from '@/app/(users)/context/ThemeContext';
 
-const DashboardHeader = ({setSidebarCollapse, sidebarCollapse}) => {
-    const { theme, toggleTheme } = useTheme();
-
-    const toggelSidebar = () => {
-        setSidebarCollapse(!sidebarCollapse)
-    }
+const DashboardHeader = () => {
+    const { toggleSidebar} = useSidebar();
+    const {theme, toggleTheme} = useTheme();
 
     return (
-        <div className='flex items-center justify-between p-4 border-b border-gray-800'>
+        <div className='flex items-center justify-between p-4 border-b border-gray-800 w-full'>
             <div className='flex items-center gap-4'>
-                <div onClick={toggelSidebar} className='p-1 border border-gray-500 rounded'>
+                <div onClick={toggleSidebar} className='p-1 border border-gray-500 rounded'>
                     <svg
                         xmlns="http://w3.org"
                         fill="none"

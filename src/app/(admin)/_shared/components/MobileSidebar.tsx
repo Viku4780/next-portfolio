@@ -3,16 +3,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AdminSidebarFooter from './AdminSidebarFooter'
-import { useState } from 'react'
 import { SIDEBAR_ITEMS } from '@/contents/sidebarItem'
+import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext'
 
 
-export default function MobileSidebar({ sidebarCollapse, setSidebarCollapse }) {
+export default function MobileSidebar() {
     const pathname = usePathname();
 
-    const toggleSidebar = () => {
-        setSidebarCollapse(!sidebarCollapse)
-    }
+    const {sidebarCollapse, toggleSidebar} = useSidebar()
 
     return (
         <aside

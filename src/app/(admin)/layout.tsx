@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import AdminSidebar from "./_shared/components/AdminSidebar";
+import MobileSidebar from "./_shared/components/MobileSidebar";
+import { SidebarCollapseProvider } from "../(users)/context/SidebarCollapseContext";
 
 
 
@@ -12,10 +15,17 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    return (
 
-        <div className="w-full min-h-screen flex justify-center items-center">
-            {children}
-        </div>
+    return (
+        <SidebarCollapseProvider>
+            <div className="w-full h-screen flex items-center">
+                <AdminSidebar />
+                <MobileSidebar />
+
+                <main className='flex-1 h-screen'>
+                    {children}
+                </main>
+            </div>
+        </SidebarCollapseProvider>
     );
 }

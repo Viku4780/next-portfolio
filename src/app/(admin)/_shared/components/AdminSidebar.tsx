@@ -3,14 +3,15 @@
 import Link from 'next/link'
 import AdminSidebarFooter from './AdminSidebarFooter'
 import SidebarNav from './SidebarNav';
+import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext';
 
-export default function AdminSidebar({sidebarCollapse}: {sidebarCollapse: boolean}) {
-
+export default function AdminSidebar() {
+   const {sidebarCollapse} = useSidebar();
     return (
         <aside
             className={`
                 h-screen
-                ${sidebarCollapse ? 'w-[80px]' : 'w-[280px]'}
+                ${sidebarCollapse ? 'w-[80px]' : 'w-[250px]'}
                 shrink-0
                 border-r
                 border-white/10

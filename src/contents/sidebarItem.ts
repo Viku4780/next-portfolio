@@ -40,12 +40,12 @@ export const SIDEBAR_ITEMS = [
     },
     {
         label: 'Media Library',
-        href: '/admin/media',
+        href: '/admin/media_library',
         icon: ImageIcon
     },
     {
         label: 'Learning Tracker',
-        href: '/admin/learning',
+        href: '/admin/learning_tracker',
         icon: BookOpenCheck
     },
     {

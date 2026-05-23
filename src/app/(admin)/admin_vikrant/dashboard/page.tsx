@@ -1,19 +1,21 @@
-'use client';
-
-import React, { useState } from 'react'
-import AdminSidebar from '@/app/(admin)/_shared/components/AdminSidebar'
 import DashboardHeader from '@/app/(admin)/_features/dashboard/components/DashboardHeader'
-import MobileSidebar from '@/app/(admin)/_shared/components/MobileSidebar';
+import { DASHBOARD_ELEMENTS } from '@/contents/dashboard'
+import DashboardElementCard from '../../_features/dashboard/components/DashboardElementCard'
+
 
 const page = () => {
-  const [sidebarCollapse, setSidebarCollapse] = useState<boolean>(false);
   return (
-    <div className='flex w-full'>
-      <AdminSidebar sidebarCollapse={sidebarCollapse} />
-      <MobileSidebar sidebarCollapse={sidebarCollapse} setSidebarCollapse={setSidebarCollapse} />
-      <main className='flex-1 h-screen'>
-        <DashboardHeader sidebarCollapse={sidebarCollapse} setSidebarCollapse={setSidebarCollapse} />
-      </main>
+    <div className=''>
+      <DashboardHeader />
+      <div className='flex lg:grid lg:grid-cols-3  xl:flex xl:flex-row items-center px-4 gap-3 mt-4 flex-col sm:grid sm:grid-cols-2  w-full'>
+        {
+          DASHBOARD_ELEMENTS.map((el, index) => {
+            return (
+                <DashboardElementCard key={index} item={el} />
+            )
+          })
+        }
+      </div>
     </div>
   )
 }

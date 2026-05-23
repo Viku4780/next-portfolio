@@ -72,7 +72,7 @@ const SidebarNav = ({sidebarCollapse}: {sidebarCollapse: boolean}) => {
                                             ? 'text-primary'
                                             : 'text-slate-500 group-hover:text-cyan-400'
                                         }
-                       `}
+                                     `}
                                 >
                                     <Icon size={21} />
                                 </div>
