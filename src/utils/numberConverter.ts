@@ -13,3 +13,7 @@ export function chartData(num: number): string{
     return `${num}`
    }
 }
+
+export function percentCalculator(num: number, total: number): string {
+    return ((num/total)*100).toFixed(0);
+}
