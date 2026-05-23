@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div className=''>
       <DashboardHeader />
-      <div className='flex lg:grid lg:grid-cols-3  xl:flex xl:flex-row items-center px-4 gap-3 mt-4 flex-col sm:grid sm:grid-cols-2  w-full'>
+      <div className='grid lg:grid-cols-3   xl:grid-cols-6 items-center px-4 gap-3 mt-4  grid-cols-2  w-full'>
         {
           DASHBOARD_ELEMENTS.map((el, index) => {
             return (
