@@ -4,7 +4,10 @@ import DashboardElementCard from '@/app/(admin)/_features/dashboard/components/D
 import ProfileOverview from '@/app/(admin)/_features/dashboard/components/ProfileOverview'
 import AudienceOverview from '@/app/(admin)/_features/dashboard/components/AudienceOverview'
 import QuickActions from '@/app/(admin)/_features/dashboard/components/QuickActions'
-import RecentProjects from '../../_shared/components/RecentProjects'
+import RecentProjects from '@/app/(admin)/_shared/components/RecentProjects'
+import ActivityFeed from '@/app/(admin)/_features/dashboard/components/ActivityFeed'
+import LearningProgress from '@/app/(admin)/_features/dashboard/components/LearningProgress'
+import GithubActivity from '@/app/(admin)/_features/dashboard/components/GithubActivity'
 
 
 const page = () => {
@@ -26,8 +29,13 @@ const page = () => {
         <QuickActions />
       </div>
 
-      <div className='grid grid-cols-1 xl:grid-cols-12 items-center px-4 gap-3 mt-4'>
+      <div className='grid grid-cols-1 xl:grid-cols-12 items-center px-4 gap-3 mt-4 h-auto'>
         <RecentProjects />
+        <ActivityFeed />
+        <div className='col-span-4 flex flex-col gap-2'>
+          <LearningProgress />
+          <GithubActivity />
+        </div>
       </div>
     </div>
   )

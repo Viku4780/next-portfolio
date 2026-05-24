@@ -8,6 +8,9 @@ import {
     ImageIcon,
     Brain,
     BarChart,
+    MessageSquare,
+    Users,
+    Mail,
 } from "lucide-react";
 
 export const DASHBOARD_ELEMENTS = [
@@ -155,4 +158,87 @@ export const RECENT_PROJECTS_DATA : recentProject[] = [
         state : 'Draft',
         publishedDate : 'May 15, 2026'
     },
-]
+];
+
+
+export const activities = [
+    {
+        id: 1,
+        icon: Mail,
+        title: "New message from John Doe",
+        description: "Project inquiry about your work",
+        time: "10m ago",
+        color: " bg-primary/10",
+        iconColor: "text-primary",
+    },
+    {
+        id: 2,
+        icon: FileText,
+        title: 'Blog post "Building Scalable APIs" published',
+        description: "Your article is now live",
+        time: "1h ago",
+        color: " bg-dash-ter/20",
+        iconColor: "text-dash-ter",
+    },
+    {
+        id: 3,
+        icon: Users,
+        title: "New visitor from United States",
+        description: "Viewed your portfolio",
+        time: "2h ago",
+        color: "from-cyan-500/20 to-cyan-500/5",
+        iconColor: "text-cyan-400",
+    },
+    {
+        id: 4,
+        icon: FolderKanban,
+        title: 'Project "E-Commerce Dashboard" updated',
+        description: "You made changes to the project",
+        time: "5h ago",
+        color: " bg-dash-ternary/10",
+        iconColor: "text-dash-ternary",
+    },
+    {
+        id: 5,
+        icon: MessageSquare,
+        title: "New testimonial from Sarah Johnson",
+        description: `"Great experience working with you!"`,
+        time: "1d ago",
+        color: "bg-dash-fiv/10",
+        iconColor: "text-dash-fiv",
+    },
+      {
+        id: 6,
+        icon: '',
+        title: "New GitHub contribution",
+        description: "You pushed 3 commits",
+        time: "1d ago",
+        color: "from-emerald-500/20 to-emerald-500/5",
+        iconColor: "text-emerald-400",
+      },
+];
+
+
+
+export const learningData = [
+  {
+    title: "System Design",
+    progress: 75,
+    gradient: "from-pink-500 to-fuchsia-500",
+  },
+  {
+    title: "Advanced JavaScript",
+    progress: 60,
+    gradient: "from-purple-500 to-violet-500",
+  },
+  {
+    title: "Docker & Kubernetes",
+    progress: 40,
+    gradient: "from-blue-500 to-cyan-500",
+  },
+  {
+    title: "AWS Cloud",
+    progress: 30,
+    gradient: "from-cyan-400 to-teal-400",
+  },
+];
