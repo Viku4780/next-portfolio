@@ -18,7 +18,7 @@ const page = () => {
         {
           DASHBOARD_ELEMENTS.map((el, index) => {
             return (
-                <DashboardElementCard key={index} item={el} />
+              <DashboardElementCard key={index} item={el} />
             )
           })
         }
@@ -32,11 +32,24 @@ const page = () => {
       <div className='grid grid-cols-1 xl:grid-cols-12 items-center px-4 gap-3 mt-4 h-auto'>
         <RecentProjects />
         <ActivityFeed />
-        <div className='col-span-4 flex flex-col gap-2'>
+        <div className='xl:col-span-4 flex flex-col gap-2'>
           <LearningProgress />
           <GithubActivity />
         </div>
       </div>
+      
+      <footer className="mt-6 border-t border-white/5 py-5">
+        <div className="flex items-center justify-center">
+          <p className="text-sm text-gray-500">
+            © 2024{" "}
+            <span className="font-medium text-gray-400">
+              VikrantCodes
+            </span>
+            . All rights reserved.
+          </p>
+        </div>
+      </footer>
+
     </div>
   )
 }

@@ -1,11 +1,9 @@
-import React from 'react'
-import BasicTable from './BasicTable'
 import Link from 'next/link'
-import { RECENT_PROJECTS_DATA } from '@/contents/dashboard'
+import RecentProjectTable from './RecentProjectTable'
 
 const RecentProjects = () => {
     return (
-        <div className=' col-span-5 py-2  bg-gray-800/50 h-full  rounded-sm'>
+        <div className=' xl:col-span-5 py-2  bg-gray-800/50 h-full  rounded-sm'>
             <div className='text-xs px-4 flex items-center justify-between  '>
                 <h3 className=' font-semibold'>Recent Projects</h3>
 
@@ -14,13 +12,8 @@ const RecentProjects = () => {
                 </Link>
             </div>
 
-            <div className=' mt-2 flex flex-col '>
-                {
-                    RECENT_PROJECTS_DATA.map((data, index) => {
-                        return  <BasicTable data={data} key={index} />
-                    })
-                }
-               
+            <div className=' mt-2'>
+                <RecentProjectTable />
             </div>
         </div>
     )

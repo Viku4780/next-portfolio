@@ -92,7 +92,7 @@ export const QUICK_ACTIONS = [
 ]
 
 
-type recentProject = {
+export type recentProject = {
     projectImg: string;
     projectName: string;
     projectStack: string[];
