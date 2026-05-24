@@ -4,6 +4,10 @@ import {
     Eye,
     MessageSquareMore,
     PersonStanding,
+    FolderKanban,
+    ImageIcon,
+    Brain,
+    BarChart,
 } from "lucide-react";
 
 export const DASHBOARD_ELEMENTS = [
@@ -49,4 +53,37 @@ export const DASHBOARD_ELEMENTS = [
         increaseByThisMonth: '15.3%',
         bgClass: 'text-dash-ter bg-dash-ter/20'
     },
+]
+
+export const QUICK_ACTIONS = [
+    {
+        label: 'Add New Project',
+        icon: FolderKanban,
+        bgClass: ' text-dash-sec bg-dash-sec/10'
+    },
+    {
+        label: 'Write New Blog',
+        icon: FileText,
+        bgClass: 'text-primary bg-primary/10'
+    },
+    {
+        label: 'Upload Media',
+        icon: ImageIcon,
+        bgClass: 'text-dash-ter bg-dash-ter/20'
+    },
+    {
+        label: 'Update Skills',
+        icon: Brain,
+        bgClass: 'text-dash-ternary bg-dash-ternary/10'
+    },
+    {
+        label: 'View Analytics',
+        icon: BarChart,
+        bgClass: 'text-dash-fiv bg-dash-fiv/10'
+    },
+    // {
+    //     label: 'Add Experience',
+    //     icon: PersonStanding,
+    //     bgClass: 'text-dash-ter bg-dash-ter/20'
+    // },
 ]

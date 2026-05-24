@@ -1,8 +1,9 @@
 import DashboardHeader from '@/app/(admin)/_features/dashboard/components/DashboardHeader'
 import { DASHBOARD_ELEMENTS } from '@/contents/dashboard'
-import DashboardElementCard from '../../_features/dashboard/components/DashboardElementCard'
-import ProfileOverview from '../../_features/dashboard/components/ProfileOverview'
-import AudienceOverview from '../../_features/dashboard/components/AudienceOverview'
+import DashboardElementCard from '@/app/(admin)/_features/dashboard/components/DashboardElementCard'
+import ProfileOverview from '@/app/(admin)/_features/dashboard/components/ProfileOverview'
+import AudienceOverview from '@/app/(admin)/_features/dashboard/components/AudienceOverview'
+import QuickActions from '@/app/(admin)/_features/dashboard/components/QuickActions'
 
 
 const page = () => {
@@ -21,7 +22,7 @@ const page = () => {
       <div className='grid lg:grid-cols-11 sm:grid-cols-2 grid-cols-1  items-center px-4 gap-3 mt-4'>
         <ProfileOverview />
         <AudienceOverview />
-        <div className='flex-1'></div>
+        <QuickActions />
       </div>
     </div>
   )

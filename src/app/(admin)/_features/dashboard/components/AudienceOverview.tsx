@@ -16,7 +16,7 @@ const totalValue = data.reduce((sum, item) => sum + item.value, 0);
 const AudienceOverview = () => {
     return (
         <div className='py-2 px-4 bg-gray-800/50 h-full  rounded-sm flex flex-col sm:col-span-1 lg:col-span-3'>
-            <h3 className='text-xs'>Audience Overview</h3>
+            <h3 className='text-xs font-semibold'>Audience Overview</h3>
 
             <div className='flex items-center gap-2 flex-1'>
                 <PieChartWithGap COLORS={COLORS} data={data} totalValue={totalValue} />
