@@ -8,6 +8,7 @@ import RecentProjects from '@/app/(admin)/_shared/components/RecentProjects'
 import ActivityFeed from '@/app/(admin)/_features/dashboard/components/ActivityFeed'
 import LearningProgress from '@/app/(admin)/_features/dashboard/components/LearningProgress'
 import GithubActivity from '@/app/(admin)/_features/dashboard/components/GithubActivity'
+import DashboardFooter from '../../_shared/components/DashboardFooter'
 
 
 const page = () => {
@@ -37,18 +38,8 @@ const page = () => {
           <GithubActivity />
         </div>
       </div>
-      
-      <footer className="mt-6 border-t border-white/5 py-5">
-        <div className="flex items-center justify-center">
-          <p className="text-sm text-gray-500">
-            © 2024{" "}
-            <span className="font-medium text-gray-400">
-              VikrantCodes
-            </span>
-            . All rights reserved.
-          </p>
-        </div>
-      </footer>
+
+      <DashboardFooter />
 
     </div>
   )
