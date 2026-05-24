@@ -87,3 +87,72 @@ export const QUICK_ACTIONS = [
     //     bgClass: 'text-dash-ter bg-dash-ter/20'
     // },
 ]
+
+
+type recentProject = {
+    projectImg: string;
+    projectName: string;
+    projectStack: string[];
+    state: 'Published' | 'Draft';
+    publishedDate: string;
+}
+
+export const RECENT_PROJECTS_DATA : recentProject[] = [
+    {
+        projectImg: '/projects/blog-app.png',
+        projectName: 'Portfolio Website v2',
+        projectStack: [
+            'Next.js',
+            'Tailwind CSS',
+            'Framer Motion'
+        ],
+        state : 'Published',
+        publishedDate : 'May 20, 2026'
+    },
+    {
+        projectImg: '/projects/chat-application.png',
+        projectName: 'Chat App',
+        projectStack: [
+            'ReactJS',
+            'Node.js',
+            'MongoDB',
+            'Cloudinary'
+        ],
+        state : 'Published',
+        publishedDate : 'May 10, 2026'
+    },
+    {
+        projectImg: '/projects/e-commerce.png',
+        projectName: 'E-Commerce',
+        projectStack: [
+            'Next.js',
+            'Tailwind CSS',
+            'NextAuth',
+            'Stripe'
+        ],
+        state : 'Published',
+        publishedDate : 'May 20, 2026'
+    },
+    {
+        projectImg: '/projects/recipe-finder.png',
+        projectName: 'Weather Dashboard',
+        projectStack: [
+            'React',
+            'OpenWeather API',
+            'Recharts'
+        ],
+        state : 'Draft',
+        publishedDate : 'May 24, 2026'
+    },
+    {
+        projectImg: '/projects/expense-tracker.webp',
+        projectName: 'AI Content Generator',
+        projectStack: [
+            'Next.js',
+            'OpenAI API',
+            'tailwind CSS'
+        ],
+        state : 'Draft',
+        publishedDate : 'May 15, 2026'
+    },
+]

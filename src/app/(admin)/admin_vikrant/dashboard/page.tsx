@@ -4,6 +4,7 @@ import DashboardElementCard from '@/app/(admin)/_features/dashboard/components/D
 import ProfileOverview from '@/app/(admin)/_features/dashboard/components/ProfileOverview'
 import AudienceOverview from '@/app/(admin)/_features/dashboard/components/AudienceOverview'
 import QuickActions from '@/app/(admin)/_features/dashboard/components/QuickActions'
+import RecentProjects from '../../_shared/components/RecentProjects'
 
 
 const page = () => {
@@ -23,6 +24,10 @@ const page = () => {
         <ProfileOverview />
         <AudienceOverview />
         <QuickActions />
+      </div>
+
+      <div className='grid grid-cols-1 xl:grid-cols-12 items-center px-4 gap-3 mt-4'>
+        <RecentProjects />
       </div>
     </div>
   )
