@@ -1,7 +1,6 @@
 import DashboardHeader from '@/app/(admin)/_features/dashboard/components/DashboardHeader'
 import { DASHBOARD_ELEMENTS } from '@/contents/dashboard'
 import DashboardElementCard from '@/app/(admin)/_features/dashboard/components/DashboardElementCard'
-import ProfileOverview from '@/app/(admin)/_features/dashboard/components/ProfileOverview'
 import AudienceOverview from '@/app/(admin)/_features/dashboard/components/AudienceOverview'
 import QuickActions from '@/app/(admin)/_features/dashboard/components/QuickActions'
 import RecentProjects from '@/app/(admin)/_shared/components/RecentProjects'
@@ -9,6 +8,7 @@ import ActivityFeed from '@/app/(admin)/_features/dashboard/components/ActivityF
 import LearningProgress from '@/app/(admin)/_features/dashboard/components/LearningProgress'
 import GithubActivity from '@/app/(admin)/_features/dashboard/components/GithubActivity'
 import DashboardFooter from '../../_shared/components/DashboardFooter'
+import ProfileViewsOverview from '../../_shared/components/ProfileViewsOverview'
 
 
 const page = () => {
@@ -25,7 +25,7 @@ const page = () => {
         }
       </div>
       <div className='grid lg:grid-cols-11 sm:grid-cols-2 grid-cols-1  items-center px-4 gap-3 mt-4'>
-        <ProfileOverview />
+        <ProfileViewsOverview />
         <AudienceOverview />
         <QuickActions />
       </div>
