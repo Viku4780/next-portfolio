@@ -1,22 +1,22 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import {SIDEBAR_ITEMS} from '@/contents/sidebarItem'
+import { SIDEBAR_ITEMS } from '@/contents/sidebarItem'
 
-const SidebarNav = ({sidebarCollapse}: {sidebarCollapse: boolean}) => {
+const SidebarNav = ({ sidebarCollapse }: { sidebarCollapse: boolean }) => {
     const pathname = usePathname();
-  return (
-     <nav className="flex-1 space-y-2 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-4 py-4">
-                    {SIDEBAR_ITEMS.map((item) => {
-                        const isActive =
-                            pathname === item.href
+    return (
+        <nav className="flex-1 space-y-2 overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-4 py-4">
+            {SIDEBAR_ITEMS.map((item) => {
+                const isActive =
+                    pathname === item.href
 
-                        const Icon = item.icon
+                const Icon = item.icon
 
-                        return (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                className={`
+                return (
+                    <Link
+                        key={item.label}
+                        href={item.href}
+                        className={`
                                     group
                                     relative
                                     flex
@@ -30,7 +30,7 @@ const SidebarNav = ({sidebarCollapse}: {sidebarCollapse: boolean}) => {
                                     duration-300
 
                             ${isActive
-                                        ? `
+                                ? `
                                     bg-gradient-to-r
                                     from-pink-500/15
                                     to-cyan-500/10
@@ -39,18 +39,18 @@ const SidebarNav = ({sidebarCollapse}: {sidebarCollapse: boolean}) => {
                                     border-pink-500/20
                                     shadow-[0_0_25px_rgba(236,72,153,0.15)]
                             `
-                                            : `
+                                : `
                                     text-slate-400
                                     hover:bg-white/5
                                     hover:text-white
                           `
-                                    }
+                            }
                          `}
-                            >
-                                {/* ACTIVE GLOW */}
-                                {isActive && (
-                                    <div
-                                        className="
+                    >
+                        {/* ACTIVE GLOW */}
+                        {isActive && (
+                            <div
+                                className="
                                             absolute
                                             left-0
                                             top-1/2
@@ -59,40 +59,62 @@ const SidebarNav = ({sidebarCollapse}: {sidebarCollapse: boolean}) => {
                                             -translate-y-1/2
                                             rounded-full  
                                     "
-                                    />
-                                )}
+                            />
+                        )}
 
-                                {/* ICON */}
-                                <div
-                                    className={`
+                        {/* ICON */}
+                        <div
+                            className={`
                                         transition-all
                                         duration-300
 
                                         ${isActive
-                                            ? 'text-primary'
-                                            : 'text-slate-500 group-hover:text-cyan-400'
-                                        }
+                                    ? 'text-primary'
+                                    : 'text-slate-500 group-hover:text-cyan-400'
+                                }
                                      `}
-                                >
-                                    <Icon size={21} />
-                                </div>
+                        >
+                            <Icon size={21} />
+                        </div>
 
-                                {/* LABEL */}
-                                {!sidebarCollapse && <span
-                                    className="
+                        <span
+                            className={`
+                                whitespace-nowrap
+                                        text-sm
+                                        font-medium
+                                        tracking-wide
+                                         overflow-hidden
+                                        transition-all duration-300 ease-in-out
+                                        ${sidebarCollapse
+                                    ? "max-w-0 opacity-0 translate-x-[-10px]"
+                                    : "max-w-[200px] opacity-100 translate-x-0"
+                                }
+                                    `
+                            }
+                        >
+                            {item.label}
+                        </span>
+
+                        {/* LABEL */}
+                        {/* {!sidebarCollapse &&
+                            <span
+                                className={`
                                         text-sm
                                         font-medium
                                         tracking-wide
                                         transition-all duration-300 ease-in-out
-                                    "
-                                >
-                                    {item.label}
-                                </span>}
-                            </Link>
-                        )
-                    })}
-                </nav>
-  )
+
+                                        ${sidebarCollapse && 'w-0'}
+                                    `}
+                            >
+                                {item.label}
+                            </span>
+                        } */}
+                    </Link>
+                )
+            })}
+        </nav>
+    )
 }
 
 export default SidebarNav

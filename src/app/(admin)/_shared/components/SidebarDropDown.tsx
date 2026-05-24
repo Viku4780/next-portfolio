@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -16,7 +17,7 @@ import {
 
 export function SidebarDropDown() {
     return (
-        <div className="transition-all duration-300 ease-in-out">
+        <div >
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button >

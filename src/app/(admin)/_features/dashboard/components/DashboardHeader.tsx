@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
 import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext';
@@ -8,6 +8,10 @@ import { useTheme } from '@/app/(users)/context/ThemeContext';
 const DashboardHeader = () => {
     const { toggleSidebar} = useSidebar();
     const {theme, toggleTheme} = useTheme();
+
+    // implement on screen lower then lg screen when clicking this a box openfrom above to take a query of string
+    const [activateSearch, setActivateSearch] = useState(false);
+    
 
     return (
         <div className='flex items-center justify-between p-4 border-b border-gray-800 w-full'>
@@ -31,14 +35,14 @@ const DashboardHeader = () => {
 
                 <div className='overflow-hidden'>
                     <h2 className='text-lg '>Dashboard</h2>
-                    <p className='text-xs text-secondary hidden md:flex'>Welcome back, Vikrant Here's what's happening with your portfolio</p>
+                    <p className='text-xs text-secondary hidden lg:inline-block whitespace-nowrap'>Welcome back, Vikrant Here's what's happening with your portfolio</p>
                 </div>
 
             </div>
 
             <div className='flex items-center mr-5 md:gap-5'>
 
-                <div className='flex items-center md:border border-secondary p-2 rounded gap-2 text-sm md:w-[300px]'>
+                <div className='flex items-center lg:border border-secondary p-2 rounded gap-2 text-sm lg:w-[300px]'>
 
                     <svg
                         xmlns="http://w3.org"
@@ -55,7 +59,7 @@ const DashboardHeader = () => {
                         />
                     </svg>
 
-                    <input type="text" placeholder='Search anything...                  Ctrl + K' className='outline-none hidden md:flex flex-1 text-secondary' />
+                    <input type="text" placeholder='Search anything...                  Ctrl + K' className='outline-none hidden lg:inline-block flex-1 text-secondary' />
 
                 </div>
 

@@ -6,7 +6,7 @@ import SidebarNav from './SidebarNav';
 import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext';
 
 export default function AdminSidebar() {
-   const {sidebarCollapse} = useSidebar();
+    const { sidebarCollapse } = useSidebar();
     return (
         <aside
             className={`
@@ -19,9 +19,10 @@ export default function AdminSidebar() {
                 backdrop-blur-xl
                 sticky
                 top-0
-                transition-all duration-300 ease-in-out
+                transition-[width] duration-300 ease-in-out
                 hidden
                 sm:flex
+                overflow-hidden
             `}
         >
             <div className="flex h-full flex-col w-full">
@@ -39,18 +40,29 @@ export default function AdminSidebar() {
                 >
 
                     <div className='px-2'>
-                        {
-                            !sidebarCollapse ?
-                                (<> <Link href={'/'} className='text-xl font-bold text-primary
-                                transition-all duration-300 ease-in-out
-                                '>VikrantCodes&trade;</Link>
 
-                                    <p className="text-xs text-slate-400">
-                                        Developer Control Center
-                                    </p> </>
-                                ) :
-                                <Link href={'/'} className='text-xl font-bold text-primary'>V</Link>
+                        <Link href={'/'} className='text-xl font-bold text-primary
+                        '>V
+                            <span className={` overflow-hidden
+                            transition-all duration-300 ease-in-out
+                            ${sidebarCollapse
+                                    ? "max-w-0 opacity-0 translate-x-[-10px]"
+                                    : "max-w-[200px] opacity-100 translate-x-0"
                                 }
+                            `}>
+                                ikrantCodes&trade;
+                            </span>
+                        </Link>
+
+                        <p className={`text-xs text-slate-400 
+                        whitespace-nowrap overflow-hidden
+                        transition-all duration-300 ease-in-out
+                        ${sidebarCollapse
+                                ? "max-w-0 opacity-0 "
+                                : "max-w-[200px] opacity-100 "
+                            }`}>
+                            Developer Control Center
+                        </p>
                     </div>
 
 

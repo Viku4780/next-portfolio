@@ -39,8 +39,8 @@ const PieChartWithGap = ({ isAnimationActive = true , totalValue, data, COLORS}:
           >
             <tspan
               x="50%"
-              dy="-10"
-              fontSize="25"
+              dy="-5"
+              fontSize="20"
               fontWeight="700"
               fill="#fff"
             >
@@ -49,7 +49,7 @@ const PieChartWithGap = ({ isAnimationActive = true , totalValue, data, COLORS}:
 
             <tspan
               x="50%"
-              dy="30"
+              dy="20"
               fontSize="14"
               fill="#94A3B8"
             >
