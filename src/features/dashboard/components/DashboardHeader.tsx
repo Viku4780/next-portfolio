@@ -9,7 +9,7 @@ const DashboardHeader = () => {
     const { toggleSidebar} = useSidebar();
     const {theme, toggleTheme} = useTheme();
 
-    // implement on screen lower then lg screen when clicking this a box openfrom above to take a query of string
+    // implement on screen lower then lg screen when clicking this a box open from above to take a query of string
     const [activateSearch, setActivateSearch] = useState(false);
     
 

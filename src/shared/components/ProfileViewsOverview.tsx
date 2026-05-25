@@ -38,16 +38,11 @@ export default function ProfileViewsOverview() {
           Profile Views Overview
         </h2>
 
-        {/* <button className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 transition hover:bg-white/10">
-          This Month
-
-          <ChevronDown className="h-4 w-4" />
-        </button> */}
         <ChartDropDownSelect />
       </div>
 
       {/* Chart */}
-      <div className="relative z-10 h-[320px] w-full">
+      <div className=" h-[250px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={data}

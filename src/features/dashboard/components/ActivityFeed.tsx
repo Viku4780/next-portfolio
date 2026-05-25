@@ -6,7 +6,7 @@ export default function ActivityFeed() {
         <div className="py-2 col-span-1 bg-gray-800/50 h-full  rounded-sm backdrop-blur-xl  shadow-[0_0_50px_rgba(0,0,0,0.35)] xl:col-span-3">
             {/* Header */}
             <div className=" px-4 flex items-center justify-between">
-                <h3 className="text-xs font-semibold text-white">Activity Feed</h3>
+                <h3 className="text-xs sm:text-md lg:text-lg font-semibold text-white">Activity Feed</h3>
 
                 <Link href={'/'} className='border border-gray-700 p-2 text-xs rounded-sm'>
                     View all
@@ -37,7 +37,7 @@ export default function ActivityFeed() {
                                 </div>
 
                                 {/* Content */}
-                                <div className="overflow-hidden w-40 sm:w-75 xl:w-40">
+                                <div className="overflow-hidden w-40 lg:w-75 xl:w-40">
                                     <h3 className="text-[12px] font-medium text-white  truncate">
                                         {activity.title}
                                     </h3>

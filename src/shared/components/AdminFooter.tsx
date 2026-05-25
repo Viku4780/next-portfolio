@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DashboardFooter = () => {
+const AdminFooter = () => {
   return (
     <footer className="mt-6 border-t border-white/5 py-5">
         <div className="flex items-center justify-center">
@@ -16,4 +16,4 @@ const DashboardFooter = () => {
   )
 }
 
-export default DashboardFooter
+export default AdminFooter

@@ -11,7 +11,7 @@ const PieChartWithGap = ({ isAnimationActive = true , totalValue, data, COLORS}:
   
 
   return (
-    <div className="w-full max-w-[200px] aspect-square ">
+    <div className="w-full  max-w-[200px] aspect-square ">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie

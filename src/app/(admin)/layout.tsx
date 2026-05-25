@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import AdminSidebar from "./_shared/components/AdminSidebar";
-import MobileSidebar from "./_shared/components/MobileSidebar";
+import AdminSidebar from "../../shared/components/AdminSidebar";
+import MobileSidebar from "../../shared/components/MobileSidebar";
 import { SidebarCollapseProvider } from "../(users)/context/SidebarCollapseContext";
+import DashboardFooter from "@/shared/components/AdminFooter";
 
 
 
@@ -24,6 +25,7 @@ export default function RootLayout({
 
                 <main className='flex-1 h-screen overflow-y-auto'>
                     {children}
+                    <DashboardFooter />
                 </main>
             </div>
         </SidebarCollapseProvider>

@@ -1,5 +1,5 @@
 
-import PieChartWithGap from '@/app/(admin)/_shared/components/PieChartWithGap'
+import PieChartWithGap from '@/shared/components/PieChartWithGap'
 import { percentCalculator } from '@/utils/numberConverter';
 
 const data = [
@@ -15,13 +15,13 @@ const totalValue = data.reduce((sum, item) => sum + item.value, 0);
 
 const AudienceOverview = () => {
     return (
-        <div className='py-2 px-4 bg-gray-800/50 h-full  rounded-sm flex flex-col sm:col-span-1 lg:col-span-3'>
-            <h3 className='text-xs font-semibold'>Audience Overview</h3>
+        <div className='py-2  bg-gray-800/50 h-full  rounded-sm flex flex-col sm:col-span-1 lg:col-span-3 px-4'>
+            <h3 className='text-xs font-semibold sm:text-md lg:text-lg'>Audience Overview</h3>
 
             <div className='flex items-center gap-2 flex-1'>
                 <PieChartWithGap COLORS={COLORS} data={data} totalValue={totalValue} />
 
-                <div className='flex flex-col gap-5  flex-1'>
+                <div className='flex flex-col gap-5  flex-1 shrink-0 '>
                     {data.map((item, index) => {
                         return (
                             <div
@@ -30,13 +30,14 @@ const AudienceOverview = () => {
                             >
                                 <div className="flex items-center gap-2">
                                     <span
-                                        className="w-2 h-2 rounded-full inline-block"
+                                        className="w-2 h-2 rounded-full inline-block
+                                        shrink-0"
                                         style={{
                                             backgroundColor: COLORS[index],
                                         }}
                                     />
 
-                                    <span>{item.name}</span>
+                                    <span >{item.name}</span>
                                 </div>
 
                                 <p>

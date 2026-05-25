@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function LearningProgress() {
     return (
-        <div className="py-2  bg-gray-800/50 h-auto  rounded-sm backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.35)] w-full">
+        <div className="py-2  bg-gray-800/50 h-auto  rounded-sm backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.35)] w-full flex-1">
             {/* Header */}
             <div className="px-4 flex items-center justify-between">
-                <h3 className="text-xs font-semibold text-white">
+                <h3 className="text-xs sm:text-md lg:text-lg font-semibold text-white">
                     Learning Progress
                 </h3>
 

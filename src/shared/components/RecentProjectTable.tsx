@@ -101,7 +101,7 @@ export default function RecentProjectTable() {
                             {row.getVisibleCells().map(cell => (
                                 <td
                                     key={cell.id}
-                                    className="border-t px-4 py-1 xl:py-3 border-gray-800 "
+                                    className="border-t px-4 py-1 sm:py-2 xl:py-3 border-gray-800 "
                                 >
                                     {flexRender(
                                         cell.column.columnDef.cell,
