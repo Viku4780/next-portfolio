@@ -148,10 +148,10 @@ export default function ProjectTable({ data }) {
                 </table>
             </div>
 
-            <div className="flex items-center justify-between px-4 border-t border-gray-800 py-2 ">
+            <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-2 px-4 border-t border-gray-800 py-2 md:py-4 ">
                 <p className="sm:text-sm text-xs text-secondary">Showing 1 to 5 of 12 projects</p>
 
-                <div className="flex text-xs items-center gap-1">
+                <div className="flex  text-xs items-center gap-1">
                     <ChevronLeft size={15} />
                     <div className="flex gap-2 ">
                         {

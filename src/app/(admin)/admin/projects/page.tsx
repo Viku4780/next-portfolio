@@ -4,10 +4,6 @@ import ProjectHeader from '@/features/Projects/components/ProjectHeader'
 import {
   Search,
   Filter,
-  MoreVertical,
-  Pencil,
-  Trash2,
-  Eye
 } from 'lucide-react'
 
 import { PROJECT_ELEMENT_DATA, projects } from '@/contents/Project'
@@ -23,7 +19,7 @@ export default function ProjectPage() {
         <ProjectHeader />
 
         {
-          projects.length ?
+          projects.length > 0 ?
            <>
             <div className="grid xl:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-5 px-4 w-full">
               {

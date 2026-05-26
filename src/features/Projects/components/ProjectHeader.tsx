@@ -1,17 +1,10 @@
 'use client'
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+
 import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext';
-import { useTheme } from '@/app/(users)/context/ThemeContext';
 import { Plus } from 'lucide-react';
 
 const ProjectHeader = () => {
     const { toggleSidebar } = useSidebar();
-    const { theme, toggleTheme } = useTheme();
-
-    // implement on screen lower then lg screen when clicking this a box open from above to take a query of string
-    const [activateSearch, setActivateSearch] = useState(false);
 
 
     return (
@@ -41,7 +34,7 @@ const ProjectHeader = () => {
                 </p>
             </div>
             </div>
-            <button className="flex items-center gap-2 rounded-2xl bg-primary  px-5 py-3 text-sm font-medium shadow-lg shadow-pink-500/20 transition hover:scale-105">
+            <button className="flex items-center gap-2 rounded-sm bg-primary  px-3 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm font-medium shadow-lg shadow-pink-500/20 transition hover:scale-105">
                 <Plus size={18} />
                 Add New Project
             </button>
