@@ -19,7 +19,7 @@ export default function RootLayout({
 
     return (
         <SidebarCollapseProvider>
-            <div className="w-full h-screen flex items-center">
+            <div className="w-full h-screen flex items-center relative">
                 <AdminSidebar />
                 <MobileSidebar />
 

@@ -10,15 +10,15 @@ import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext'
 export default function MobileSidebar() {
     const pathname = usePathname();
 
-    const {sidebarCollapse, toggleSidebar} = useSidebar()
+    const { sidebarCollapse, toggleSidebar } = useSidebar()
 
     return (
         <aside
             className={`
                 h-screen
-                ${sidebarCollapse ? 'hidden' : 'w-[280px]'}
-                shrink-0
+                ${sidebarCollapse ? '-translate-x-full' : 'translate-x-0'}
                 border-r
+                w-[280px]
                 border-white/10
                 bg-[#050816]/80
                 backdrop-blur-xl
@@ -27,6 +27,7 @@ export default function MobileSidebar() {
                 inset-0
                 fixed
                 sm:hidden
+                z-50
                 
             `}
         >
@@ -46,16 +47,11 @@ export default function MobileSidebar() {
                 >
 
                     <div className='px-2'>
-                        {
-                            !sidebarCollapse ?
-                                (<> <Link href={'/'} className='text-xl font-bold text-primary'>VikrantCodes&trade;</Link>
+                        <Link href={'/'} className='text-xl font-bold text-primary'>VikrantCodes&trade;</Link>
 
-                                    <p className="text-xs text-slate-400">
-                                        Developer Control Center
-                                    </p> </>
-                                ) :
-                                <Link href={'/'} className='text-xl font-bold text-primary'>V</Link>
-                        }
+                        <p className="text-xs text-slate-400">
+                            Developer Control Center
+                        </p>
                     </div>
 
                     <svg onClick={toggleSidebar} xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -138,7 +134,7 @@ export default function MobileSidebar() {
                                 </div>
 
                                 {/* LABEL */}
-                                {!sidebarCollapse && <span
+                                <span
                                     className="
                                         text-sm
                                         font-medium
@@ -146,7 +142,7 @@ export default function MobileSidebar() {
                                     "
                                 >
                                     {item.label}
-                                </span>}
+                                </span>
                             </Link>
                         )
                     })}
