@@ -14,6 +14,6 @@ export function chartData(num: number): string{
    }
 }
 
-export function percentCalculator(num: number, total: number): string {
-    return ((num/total)*100).toFixed(0);
+export function percentCalculator(num: number, total: number): number {
+    return ((num/total)*100);
 }
