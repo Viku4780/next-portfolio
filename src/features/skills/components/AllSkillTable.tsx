@@ -16,12 +16,12 @@ const AllSkillTable = () => {
                 const Icon = row.icon;
 
                 return (
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2  md:gap-4 max-w-[200px]">
                         <div
                             className="
                                 flex
-                                h-11
-                                w-11
+                                h-10
+                                w-10
                                 items-center
                                 justify-center
                                 rounded-sm
@@ -36,7 +36,7 @@ const AllSkillTable = () => {
                             />
                         </div>
 
-                        <span className="font-medium">
+                        <span className="font-medium text-xs md:text-sm">
                             {row.name}
                         </span>
                     </div >
@@ -57,6 +57,7 @@ const AllSkillTable = () => {
                               text-xs
                               font-medium
                               ${row.categoryColor}
+                              border
                             `}
                     >
                         {row.category}
@@ -69,12 +70,12 @@ const AllSkillTable = () => {
             cell: info => {
                 const row = info.row.original;
                 return (
-                    <div className="flex items-center gap-4">
-                        <span className="w-[45px] text-sm text-slate-300">
+                    <div className="flex items-center gap-2 md:gap-4  max-w-[200px]">
+                        <span className="w-[45px] text-xs text-slate-300">
                             {info.getValue()}
                         </span>
 
-                        <div className="h-2 w-[140px] overflow-hidden rounded-full bg-white/10">
+                        <div className="h-2 w-[90px] md:w-[120px] overflow-hidden  rounded-full bg-white/10">
                             <div
                                 style={{
                                     width: row.width
@@ -117,12 +118,12 @@ const AllSkillTable = () => {
             id: 'actions',
             header: 'Action',
             cell: ({ row }) => (
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2">
                     <button
                         className="
                                 flex
-                                h-9
-                                w-9
+                                h-8
+                                w-8
                                 items-center
                                 justify-center
                                 rounded-xl
@@ -137,14 +138,14 @@ const AllSkillTable = () => {
                                 hover:text-cyan-400
                               "
                     >
-                        <Pencil size={16} />
+                        <Pencil size={12} />
                     </button>
 
                     <button
                         className="
                                 flex
-                                h-9
-                                w-9
+                                h-8
+                                w-8
                                 items-center
                                 justify-center
                                 rounded-xl
@@ -159,14 +160,14 @@ const AllSkillTable = () => {
                                 hover:text-red-400
                               "
                     >
-                        <Trash2 size={16} />
+                        <Trash2 size={12} />
                     </button>
 
-                    <button
+                    {/* <button
                         className="
                                 flex
-                                h-9
-                                w-9
+                                h-8
+                                w-8
                                 items-center
                                 justify-center
                                 rounded-xl
@@ -179,8 +180,8 @@ const AllSkillTable = () => {
                                 hover:text-white
                               "
                     >
-                        <MoreVertical size={16} />
-                    </button>
+                        <MoreVertical size={12} />
+                    </button> */}
                 </div>
             ),
         }),
@@ -195,24 +196,24 @@ const AllSkillTable = () => {
     return (
         <div
             className="
-            overflow-hidden
             rounded-lg
-            
+            overflow-x-auto
             border
             border-white/10
             backdrop-blur-xl
+            max-w-5xl
           "
         >
             {/* TABLE HEADER */}
-            <div className="border-b border-white/10 p-3">
+            <div className=" p-3">
                 <h2 className="text-xl font-semibold">
                     All Skills
                 </h2>
             </div>
 
             {/* TABLE */}
-            <table className="w-full border-collapse">
-                <thead className="border-b border-white/10">
+            <table className="w-full ">
+                <thead className="border-t border-white/10">
                     {table.getHeaderGroups().map(headerGroup => (
                         <tr
                             key={headerGroup.id}
@@ -221,7 +222,8 @@ const AllSkillTable = () => {
                             {headerGroup.headers.map(header => (
                                 <th
                                     key={header.id}
-                                    className="px-6 py-5 font-medium"
+                                    className="
+                                    px-3 py-2 md:py-4 font-medium"
                                 >
                                     {flexRender(
                                         header.column.columnDef.header,
@@ -247,7 +249,8 @@ const AllSkillTable = () => {
                                 {row.getVisibleCells().map(cell => (
                                     <td
                                         key={cell.id}
-                                        className=" px-6 py-5"
+                                        className="
+                                    px-3 py-2 md:py-4"
                                     >
                                         {flexRender(
                                             cell.column.columnDef.cell,
