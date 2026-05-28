@@ -120,3 +120,62 @@ export const allSkills: AllSkill[] = [
     categoryColor: 'bg-orange-500/10 text-orange-400'
   }
 ]
+
+
+export const categories = [
+    "Frontend",
+    "Backend",
+    "Database",
+    "DevOps",
+    "Cloud",
+];
+
+export const levels = [
+    "Beginner",
+    "Intermediate",
+    "Advanced",
+    "Expert",
+];
+
+export const initialSkills = [
+    {
+        id: 1,
+        name: "Next.js",
+        category: "Frontend",
+        proficiency: 90,
+        level: "Advanced",
+        status: "Active",
+    },
+    {
+        id: 2,
+        name: "React",
+        category: "Frontend",
+        proficiency: 85,
+        level: "Advanced",
+        status: "Active",
+    },
+    {
+        id: 3,
+        name: "TypeScript",
+        category: "Frontend",
+        proficiency: 80,
+        level: "Advanced",
+        status: "Active",
+    },
+    {
+        id: 4,
+        name: "Node.js",
+        category: "Backend",
+        proficiency: 75,
+        level: "Intermediate",
+        status: "Active",
+    },
+    {
+        id: 5,
+        name: "MongoDB",
+        category: "Database",
+        proficiency: 70,
+        level: "Intermediate",
+        status: "Active",
+    },
+];

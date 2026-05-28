@@ -26,9 +26,12 @@ const SkillsHeader = () => {
                     </svg>
                 </div>
 
-                <h2 className=" text-lg font-bold tracking-tight">
+                <div className='flex flex-col'>
+                    <h2 className=" text-lg font-bold tracking-tight">
                     Skills
                 </h2>
+                <p className='text-secondary hidden sm:inline-block text-xs'>Manage your technical skills</p>
+                </div>
             </div>
 
             <button className="flex items-center gap-2 rounded-sm bg-primary  px-3 py-2 sm:px-5 sm:py-3 text-xs sm:text-sm font-medium shadow-lg shadow-pink-500/20 transition hover:scale-105">

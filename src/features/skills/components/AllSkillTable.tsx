@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { allSkills } from '@/contents/skills'
-import { Pencil, Trash2, MoreVertical } from 'lucide-react'
+import { Pencil, Trash2 } from 'lucide-react'
 import { AllSkill } from '@/contents/skills'
 import { createColumnHelper, useReactTable, flexRender, getCoreRowModel } from '@tanstack/react-table'
+import { Filter, X } from 'lucide-react'
+import SkillFilter from './SkillFilter'
 
 const AllSkillTable = () => {
     const columnHelper = createColumnHelper<AllSkill>();
+    const [filterActive, setFilterActive] = useState<boolean>(false);
+
+   
 
     const columns = [
         columnHelper.accessor('name', {
@@ -162,26 +167,6 @@ const AllSkillTable = () => {
                     >
                         <Trash2 size={12} />
                     </button>
-
-                    {/* <button
-                        className="
-                                flex
-                                h-8
-                                w-8
-                                items-center
-                                justify-center
-                                rounded-xl
-                                border
-                                border-white/10
-                                bg-white/5
-                                text-slate-400
-                                transition-all
-                                duration-300
-                                hover:text-white
-                              "
-                    >
-                        <MoreVertical size={12} />
-                    </button> */}
                 </div>
             ),
         }),
@@ -205,10 +190,19 @@ const AllSkillTable = () => {
           "
         >
             {/* TABLE HEADER */}
-            <div className=" p-3">
-                <h2 className="text-xl font-semibold">
+            <div className="flex justify-between items-center p-3 ">
+
+
+                {!filterActive ? <><h2 className="text-xl font-semibold shrink-0">
                     All Skills
                 </h2>
+                    <button onClick={() => setFilterActive(true)} className='flex text-sm items-center gap-1 sm:gap-2 border outline-none border-gray-800 py-2 px-4 rounded-sm cursor-pointer'>
+                        <Filter size={13} />
+                        Filter
+                    </button>
+                </>
+                    :
+                    <SkillFilter />}
             </div>
 
             {/* TABLE */}
@@ -236,32 +230,54 @@ const AllSkillTable = () => {
                 </thead>
 
                 <tbody>
-                        {table.getRowModel().rows.map(row => (
-                            <tr
-                                key={row.id}
-                                className="
+                    {table.getRowModel().rows.map(row => (
+                        <tr
+                            key={row.id}
+                            className="
                                     transition-all
                                     duration-300
                                     hover:bg-white/[0.03]
                                     border-t border-white/10
                                     "
-                            >
-                                {row.getVisibleCells().map(cell => (
-                                    <td
-                                        key={cell.id}
-                                        className="
+                        >
+                            {row.getVisibleCells().map(cell => (
+                                <td
+                                    key={cell.id}
+                                    className="
                                     px-3 py-2 md:py-4"
-                                    >
-                                        {flexRender(
-                                            cell.column.columnDef.cell,
-                                            cell.getContext()
-                                        )}
-                                    </td>
-                                ))}
-                            </tr>
-                        ))}
+                                >
+                                    {flexRender(
+                                        cell.column.columnDef.cell,
+                                        cell.getContext()
+                                    )}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
                 </tbody>
+
             </table>
+
+            <div className=' border-t border-gray-800 w-full p-3 flex items-center justify-between'>
+                <p className="text-sm text-gray-400">
+                    Showing 5 skills
+                </p>
+
+                <button
+                    onClick={() => {
+                        setSearch("");
+                        setFilters({
+                            category: "",
+                            level: "",
+                            status: "",
+                        });
+                    }}
+                    className="flex items-center gap-2 rounded-md border border-white/10  px-4 py-2 text-xs sm:text-sm transition hover:bg-white/10"
+                >
+                    <X className="sm:h-6 sm:w-6 h-4 w-4" />
+                    Clear Filters
+                </button>
+            </div>
         </div>
     )
 }
