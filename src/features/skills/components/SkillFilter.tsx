@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import {
     ChevronDown,
     Search,
-
 } from "lucide-react";
 import { levels, categories, initialSkills } from '@/contents/skills';
 
@@ -15,8 +14,6 @@ const SkillFilter = () => {
     });
 
     const [skills, setSkills] = useState(initialSkills);
-
-  
 
     const filteredSkills = skills.filter((skill) => {
         const matchesSearch = skill.name
@@ -109,7 +106,7 @@ const SkillFilter = () => {
 }
 
 
-function Select({
+export function Select({
     value,
     onChange,
     options,

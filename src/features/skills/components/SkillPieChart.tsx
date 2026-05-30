@@ -8,7 +8,7 @@ import {
 } from "recharts";
 import { skillsOverview } from "@/contents/skills";
 
-const PieCharts = () => {
+const SkillPieChart = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const total = skillsOverview.reduce((sum, entry) => sum + entry.value,0);
@@ -101,4 +101,4 @@ const PieCharts = () => {
   );
 };
 
-export default PieCharts;
+export default SkillPieChart;

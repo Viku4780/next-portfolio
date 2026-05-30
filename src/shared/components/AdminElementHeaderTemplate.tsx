@@ -15,7 +15,7 @@ interface AdminHeaderProps {
 const AdminElementHeaderTemplate = ({metaData, children }: AdminHeaderProps) => {
     const {toggleSidebar} = useSidebar()
     return (
-        <header className='flex items-center justify-between p-4 border-b border-gray-800 w-full'>
+        <header className='flex items-center justify-between px-4 py-3 border-b border-gray-800 w-full'>
             <div className='flex items-center gap-4'>
                 <div onClick={toggleSidebar} className='p-1 border border-gray-500 rounded'>
                     <svg

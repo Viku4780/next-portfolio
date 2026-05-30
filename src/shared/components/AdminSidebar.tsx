@@ -15,7 +15,9 @@ export default function AdminSidebar() {
                 shrink-0
                 border-r
                 border-white/10
-                bg-[#050816]/80
+                dark:bg-[#050816]/80
+
+             bg-gray-200
                 backdrop-blur-xl
                 sticky
                 top-0

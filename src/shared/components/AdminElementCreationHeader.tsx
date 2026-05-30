@@ -1,14 +1,16 @@
-'use client';
-
 import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext'
-import React from 'react'
 
-const ProjectCreationHeader = () => {
+interface AdminHeader {
+    element: string;
+    desc: string;
+}
+
+const AdminElementCreationHeader = ({metaData}: {metaData: AdminHeader}) => {
     const {toggleSidebar} = useSidebar()
     return (
         <>
             {/* Breadcrumb */}
-            <div className="mb-6 flex items-center gap-2 text-sm sm:text-md lg:text-lg text-gray-400">
+            <div className=" border-b border-gray-800 flex p-3 sm:p-5  items-center gap-2  text-sm sm:text-md lg:text-lg text-gray-400">
                 <div onClick={toggleSidebar} className='p-1 border border-gray-500 rounded mr-4'>
                     <svg
                         xmlns="http://w3.org"
@@ -25,25 +27,25 @@ const ProjectCreationHeader = () => {
                         />
                     </svg>
                 </div>
-                <span className="text-primary">Projects</span>
+                <span className="text-primary">{metaData.element}</span>
 
                 <span>›</span>
 
-                <span className="text-white">Add New Project</span>
+                <span className="text-white">Add New {metaData.element}</span>
             </div>
 
             {/* Heading */}
-            <div className="mb-8">
+            <div className=" p-3 sm:p-5">
                 <h1 className="text-lg lg:text-3xl font-bold">
-                    Add New Project
+                    Add New {metaData.element}
                 </h1>
 
                 <p className="mt-2 text-sm text-secondary">
-                    Create a new project to showcase in your portfolio.
+                    {metaData.desc}
                 </p>
             </div>
         </>
     )
 }
 
-export default ProjectCreationHeader
+export default AdminElementCreationHeader

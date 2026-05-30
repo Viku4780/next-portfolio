@@ -1,46 +1,12 @@
-'use client'
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
-import { useSidebar } from '@/app/(users)/context/SidebarCollapseContext';
-import { useTheme } from '@/app/(users)/context/ThemeContext';
+import React from 'react'
+import { motion } from 'framer-motion' 
+import { useTheme } from '@/app/(users)/context/ThemeContext'
+import { MoonIcon, SunIcon } from 'lucide-react'
 
-const DashboardHeader = () => {
-    const { toggleSidebar} = useSidebar();
-    const {theme, toggleTheme} = useTheme();
-
-    // implement on screen lower then lg screen when clicking this a box open from above to take a query of string
-    const [activateSearch, setActivateSearch] = useState(false);
-    
-
-    return (
-        <div className='flex items-center justify-between p-4 border-b border-gray-800 w-full'>
-            <div className='flex items-center gap-4'>
-                <div onClick={toggleSidebar} className='p-1 border border-gray-500 rounded'>
-                    <svg
-                        xmlns="http://w3.org"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                        />
-                    </svg>
-                </div>
-
-                <div className='overflow-hidden'>
-                    <h2 className='text-lg '>Dashboard</h2>
-                    <p className='text-xs text-secondary hidden lg:inline-block whitespace-nowrap'>Welcome back, Vikrant Here's what's happening with your portfolio</p>
-                </div>
-
-            </div>
-
-            <div className='flex items-center mr-5 md:gap-5'>
+const DashboardHeaderSide = () => {
+    const {theme, toggleTheme} = useTheme()
+  return (
+    <div className='flex items-center mr-5 md:gap-5'>
 
                 <div className='flex items-center lg:border border-secondary p-2 rounded gap-2 text-sm lg:w-[300px]'>
 
@@ -92,8 +58,7 @@ const DashboardHeader = () => {
                 </svg>
 
             </div>
-        </div>
-    )
+  )
 }
 
-export default DashboardHeader
+export default DashboardHeaderSide

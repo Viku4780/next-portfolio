@@ -10,7 +10,7 @@ import {
   EmptyTitle,
 } from "@/components/ui/empty"
 
-export default function EmptyDemo() {
+export default function EmptyProjectSkeleton() {
   return (
     <Empty className="border">
       <EmptyHeader>
