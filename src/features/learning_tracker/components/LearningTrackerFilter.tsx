@@ -5,7 +5,7 @@ import {
 import { levels, categories, initialSkills } from '@/contents/skills';
 import { Select } from '@/shared/components/Select';
 
-const SkillFilter = () => {
+const LearningTrackerFilter = () => {
     const [search, setSearch] = useState("");
     const [filters, setFilters] = useState({
         category: "",
@@ -40,21 +40,7 @@ const SkillFilter = () => {
         );
     });
     return (
-        <div className="grid gap-4 lg:gap-3 sm:grid-cols-2 lg:grid-cols-4 ">
-            {/* Search */}
-            <div className="relative">
-                <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
-
-                <input
-                    value={search}
-                    onChange={(e) =>
-                        setSearch(e.target.value)
-                    }
-                    placeholder="Search skills..."
-                    className="h-10 sm:h-12  rounded-sm border border-white/10  
-                                    pl-8 pr-3 text-sm outline-none transition focus:border-pink-500"
-                />
-            </div>
+        <div className="grid gap-3 lg:gap-4 sm:grid-cols-3 ">
 
             {/* Category */}
             <Select
@@ -96,8 +82,8 @@ const SkillFilter = () => {
                 }
                 options={[
                     "",
-                    "Active",
-                    "Inactive",
+                    "In Progress",
+                    "Completed",
                 ]}
                 placeholder="All Status"
             />
@@ -105,4 +91,4 @@ const SkillFilter = () => {
     )
 }
 
-export default SkillFilter
+export default LearningTrackerFilter
